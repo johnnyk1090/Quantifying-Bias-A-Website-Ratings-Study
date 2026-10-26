@@ -1,30 +1,38 @@
-<h1 align="center" id="title">Data_Analysis_on_website</h1>
+<img src="assets/banner.svg" width="100%" alt="Quantifying Rating Bias. Does a ticket seller rate the films it sells more generously than independent critics and audiences do?">
 
-<p id="description">The following project will examine the accuracy and possible bias of a specific website's ratings on movies.</p>
+## The question
 
-    
-<h2>🧐 Features</h2>
+A site that sells movie tickets also publishes movie ratings. This project examines the **accuracy and possible bias** of those ratings by comparing them with independent aggregators.
 
-Here're some of the project's best features:
+## What is inside
 
-*   SOTA Data Visualization 
-*   Scikit-Learn Data Normalization
+- The seller's scraped ratings ([`fandango_scrape.csv`](fandango_scrape.csv)) against scores from other review sites ([`all_sites_scores.csv`](all_sites_scores.csv))
+- Data visualisation of the distributions and their differences
+- Score **normalisation** with scikit-learn so different rating scales compare fairly
 
-<h2>🛠️ Installation Steps:</h2>
+## Finding
 
-<p>1. Download spec-file.txt</p>
+After normalising every site to the same 0-5 scale, the seller's distribution is clearly uneven and sits well above the others, while Rotten Tomatoes critics have the most uniform distribution. The seller also **displays a rounded-up version** of its own underlying rating. Among the films critics rated worst, the seller still shows **around four stars**.
 
-<p>2. Follow the instructions into Conda_Virtual_Env.txt</p>
+## Run it
 
-  
-  
-<h2>💻 Built with</h2>
+1. Download `spec-file.txt`.
+2. Follow the instructions in `Conda_Virtual_Env.txt`:
 
-Technologies used in the project:
+```bash
+# a new environment from the spec file
+conda create --name myenv --file spec-file.txt
+# or install the listed packages into an existing environment
+conda install --name myenv --file spec-file.txt
+```
+The full set of environment commands is in [`Conda_Virtual_Env.txt`](Conda_Virtual_Env.txt).
 
-*   Python
-*   Numpy
-*   Pandas
-*   Matplotlib
-*   Seaborn
-*   Scikit-Learn
+Then open [`Data-Analysis-Project.ipynb`](Data-Analysis-Project.ipynb).
+
+## Built with
+
+`Python` · `NumPy` · `pandas` · `Matplotlib` · `Seaborn` · `scikit-learn`
+
+<br>
+
+<p align="center"><sub>Part of the work of <a href="https://github.com/johnnyk1090">Giannis Konteas</a> · end-to-end data science</sub></p>
